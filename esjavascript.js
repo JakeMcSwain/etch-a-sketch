@@ -1,13 +1,18 @@
 var mainDiv = document.getElementById('container');
 var number = prompt('How many pixels per row would you like?');
 var area = number * number;
-var resetButton = document.getElementById('resetButton')
+var resetButton = document.getElementById('resetButton');
+var colorButton = document.getElementById('colorButton');
+var rainbowButton = document.getElementById('rainbowButton');
+
 
 
 
 generateDivs(number);
 
 resetButton.addEventListener('click', resetGrid);
+colorButton.addEventListener('click', changeColor);
+rainbowButton.addEventListener('click', rainbowColor);
 
 function generateDivs(number) {
     mainDiv.style.gridTemplateRows = `repeat(${number}, 1fr)`;
@@ -55,4 +60,38 @@ function closeLoop() {
                 effect.style.backgroundColor = 'black';
     })
 })
+}
+
+function changeColor() {
+    var selectedColor= (function () {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }) ();
+    const effect = document.querySelectorAll('.newGrid')
+    effect.forEach(function(effect) {
+        effect.addEventListener ('mouseover' , function() {
+            effect.style.backgroundColor = selectedColor;
+    })
+})
+}
+
+function rainbowColor() {
+    const effect = document.querySelectorAll('.newGrid')
+    effect.forEach(function(effect) {
+        effect.addEventListener ('mouseover' , function() {
+            var selectedColor= (function () {
+                var letters = '0123456789ABCDEF';
+                var color = '#';
+                for (var i = 0; i < 6; i++) {
+                  color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }) (); 
+            effect.style.backgroundColor = selectedColor;
+        });
+    })
 }

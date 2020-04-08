@@ -1,6 +1,6 @@
 This project is part of The Odin Projects curriculum. I was given the following instructions at the bottom.
 
-I was able to successfully complete this project using a lot of googling. I only looked at one student solution, and was able to solve the repeating and rest issue completely on my own using inspector
+I was able to successfully complete this project using a lot of googling. I only looked at one student solution, and was able to solve the repeating and rest issue completely on my own using inspector.
 
 
 
