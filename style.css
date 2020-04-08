@@ -1,4 +1,9 @@
-body {text-align: center;}
+@import url(https://fonts.googleapis.com/css?family=Codystar);
+
+body {
+    text-align: center;
+    background-color: #ff5050;
+}
 .newGrid {
     background-color: white;
     display: inline-block;
@@ -9,7 +14,7 @@ body {text-align: center;}
 }
 
 .gridContainer {
-    width: 500px;
+    width: 900px;
     height: 500px;    
     display: grid;
     border-style: solid;
@@ -21,14 +26,15 @@ body {text-align: center;}
 
 h1 {
     text-align: center;
-    margin-bottom: 1px;
+    margin-bottom: 10px;
+    font-family: 'Codystar';
 }
 
 .button {
     margin: 0 auto;
     display: block;
     text-align: center;
-    margin-top: 0px;
+    margin-top: 10px;
 }
 
 #resetButton {
